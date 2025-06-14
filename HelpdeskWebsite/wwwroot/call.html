@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Keith's Employee Management Project'</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <nav class="navbar sidebar">
+        <ul>
+            <li>
+                <a href="adminhome.html">Home</a>
+            </li>
+            <li id="managementNav">
+                <a href="admin.html">Management</a>
+            </li>
+            <li id="customerNav">
+                <a href="customermanage.html">Customers</a>
+            </li>
+            <li id="ticketNav">
+                <a href="call.html">Ticket</a>
+            </li>
+            <li>
+                <a href="#">Report</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+            <div class="sidebar-user-info">
+                <div id="sidebarName"></div>
+                <div id="sidebarRole"></div>
+                <div id="sidebarEmail"></div>
+            </div>
+        </ul>
+        <button id="signOutButton">Sign Out</button>
+    </nav>
+
+
+    <!--    <form>
+            <input class="form-control" type="search" placeholder="Search" id="srch" aria-label="Search"
+                   style="width:20vw;margin-right:0vw;">
+        </form>-->
+
+    <form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+        <div class="modal fade" id="theModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="theModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modaltitle"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="modal-body">
+                                <div>
+                                    <div>Employee:</div>
+                                    <div><select id="ddlEmployees" name="ddlEmployees"></select></div>
+                                </div>
+                                <div>
+                                    <div>Customer:</div>
+                                    <div><select id="ddlCustomers" name="ddlCustomers"></select></div>
+                                </div>
+                                <div>
+                                    <div>Problem:</div>
+                                    <div><select id="ddlProblems" name="ddlProblems"></select></div>
+                                </div>
+                                <div id="dayOpenBox">
+                                    <div>Date Opened:</div>
+                                    <div id="DateOpenedBox"></div>
+                                </div>
+                                <div id="closeWhenAdd">
+                                    <div id="dayCloseBox">
+                                        <div>Date Closed:</div>
+                                        <div id="DateClosedBox"></div>
+                                    </div>
+                                    <div id="CallClosedBox">
+                                        <div>Close Call:</div>
+                                        <div>
+                                            <input type="checkbox" id="checkBoxClose" name="checkBoxClose" value="CloseCall">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>Processing Days:</div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Processing Day" id="DayExpectedBox" name="DayExpectedBox" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>Notes:</div>
+                                    <div>
+                                        <textarea type="text" placeholder="Enter Note" id="Notebox" name="Notebox"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="actionButtonContainer">
+                                <input type="button" id="actionbutton" />
+                                <input type="button" value="Delete" id="deletebutton" />
+                            </div>
+
+                            <div id="dialog">
+                                <strong>Delete Employee?</strong>
+                                <input type="button" value="Delete" id="yesbutton" />
+                                <input type="button" value="Cancel" id="nobutton" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <div id="employeeContainer">
+        <div id="employeeList"></div>
+        <div class="button-group">
+            <button id="addEmployeeButton">Add</button>
+            <button id="refreshEmployeeButton">Refresh</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="/lib/js/jquery.min.js"></script>
+    <script src="lib/js/jquery.validate.min.js"></script>
+
+    <script src="/lib/js/bootstrap.min.js"></script>
+    <script src="call.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Keith's Employee Management Project'</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <nav class="navbar sidebar">
+        <ul>
+            <li>
+                <a href="adminhome.html">Home</a>
+            </li>
+            <li id="managementNav">
+                <a href="admin.html">Management</a>
+            </li>
+            <li id="customerNav">
+                <a href="customermanage.html">Customers</a>
+            </li>
+            <li id="ticketNav">
+                <a href="call.html">Ticket</a>
+            </li>
+            <li id="reportNav">
+                <a href="#">Report</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+            <div class="sidebar-user-info">
+                <div id="sidebarName"></div>
+                <div id="sidebarRole"></div>
+                <div id="sidebarEmail"></div>
+            </div>
+        </ul>
+        <button id="signOutButton">Sign Out</button>
+
+    </nav>
+
+
+    <div id="welcomeMessage"></div>
+    <div id="ticketListContainer">
+        <ul id="ticketList"></ul>
+        <button id="requestTicketButton">Request New Ticket</button>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="/lib/js/jquery.min.js"></script>
+    <script src="/lib/js/bootstrap.min.js"></script>
+    <script src="adminHome.js"></script>
+</body>
+</html>

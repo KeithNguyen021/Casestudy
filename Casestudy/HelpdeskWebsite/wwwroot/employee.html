@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Case #1</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Employee.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md  ">
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-3">
+                <li class="nav-item">
+                    <a class="nav-link " href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="employee.html">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://www.fanshawec.ca/">Contact Us</a>
+                </li>
+            </ul>
+            <form>
+                <input class="form-control" type="search" placeholder="Search" id="srch" aria-label="Search"
+                       style="width:10vw;margin-right:5vw;">
+            </form>
+        </div>
+    </nav>
+
+    <form id="EmployeeModalForm" name="EmployeeModalForm" method="post" action="">
+        <div class="modal fade" id="theModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="theModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger">
+                        <div class="card-heading text-center ">
+                            Add/Update Employee
+                        </div>
+                        <h2 class="modal-title" id="modaltitle">Update Employee</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mx-2 my-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+                                        <img src="img/10306707.png" alt="Help desk image" class="img-fluid" style="width: 100px;" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Title:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter title" id="TextBoxTitle" name="TextBoxTitle" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">First Name:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter first name" id="TextBoxFirstName" name="TextBoxFirstName" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Surname:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter surname" id="TextBoxSurname" name="TextBoxSurname" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Email:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter email" id="TextBoxEmail" name="TextBoxEmail" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Phone Number:</div>
+                                        <div class="col-8">
+                                            <input type="text" placeholder="enter phone number" id="TextBoxPhone" name="TextBoxPhone" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">Departments:</div>
+                                        <div class="col-8"><select id="ddlDepartments" name="ddlDepartments" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-4">Picture:</div>
+                                        <div class="col-8" id="imageHolder"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="row border m-2 p-2">
+                                <label for="file">Choose Different Picture?</label>
+                                <input type="file" id="uploader" class="text-center btn btn-outline-secondary" />
+                                <div id="uploadstatus" class="text-left"></div>
+                            </div>
+                            <div class="row" style="padding-left:5vw;">
+                                <input type="button" value="update" id="actionbutton" class="col-3 m-2 btn btn-secondary col-5"
+                                       style="left:20%" />
+                                <input type="button" value="delete" id="deletebutton" class="col-3 m-2 btn btn-secondary col-5" />
+                            </div>
+                            <div class="alert alert-danger fade show" role="alert" id="dialog"
+                                 style="width:80%;margin-top:2vh;margin-left:10%;">
+                                <strong>Delete Employee?</strong><p></p>
+                                <input type="button" class="btn btn-secondary mt-3" value="yes" id="yesbutton" />
+                                <input type="button" class="btn btn-secondary mt-3" value="No" id="nobutton" />
+                            </div>
+
+                            <div class="card-footer text-center">
+                                <div id="modalstatus" class="text-left mt-3 mb-2"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </form>
+
+        <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+            <img src="img/10306707.png" alt="Help desk image" class="img-fluid" style="width: 200px;" />
+        </div>
+        <h2 class="text-center">Tu Kiet Nguyen Case Study</h2>
+
+        <div class="justify-content-center align-items-center row mt-5 ml-1">
+            <div class="list-group col-10" id="employeeList" style="height:45vh;">
+            </div>
+        </div>
+
+
+
+        <script src="/lib/js/jquery.min.js"></script>
+        <script src="lib/js/jquery.validate.min.js"></script>
+
+        <script src="/lib/js/bootstrap.min.js"></script>
+        <script src="/Employee.js"></script>
+</body>
+</html>

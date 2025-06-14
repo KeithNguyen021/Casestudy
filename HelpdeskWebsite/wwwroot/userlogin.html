@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Keith's Employee Management Project'</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <nav class="navbar sidebar">
+        <button id="loginbutton" class="nav-button">Login</button>
+        <button id="signupbutton" class="nav-button">Sign Up</button>
+    </nav>
+
+    <div style="position: fixed; top: 10px; right: 10px; background: #f0f0f0; padding: 10px; border: 1px solid #ccc; font-size: 14px;">
+        <strong>Test Accounts:</strong><br>
+        Admin: admin<br>
+        Technician: tech<br>
+        Customer: customer<br>
+        Password: 1
+    </div>
+
+
+    <div id="loginFormContainer" class="form-container">
+        <h2>Log In</h2>
+        <form id="LogInForm">
+            <label for="TextBoxUserName">Username:</label>
+            <input type="text" id="TextBoxUserName" name="TextBoxUserName" placeholder="Enter Username">
+
+            <label for="TextBoxPassword">Password:</label>
+            <input type="password" id="TextBoxPassword" name="TextBoxPassword" placeholder="Enter Password">
+
+            <button type="submit" id="loginbuttonmodal">Log In</button>
+
+            <p id="loginError"></p>
+        </form>
+    </div>
+
+    <script src="/lib/js/jquery.min.js"></script>
+    <script src="/lib/js/jquery.validate.min.js"></script>
+    <script src="/lib/js/bootstrap.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

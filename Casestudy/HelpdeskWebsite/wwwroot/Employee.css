@@ -1,0 +1,82 @@
+﻿#status {
+    background-color: darkblue;
+    font-size: large;
+    color: lightblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading {
+    background-color: darkcyan;
+    padding: 10px;
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+button.list-group-item {
+    color: white; 
+    font-size: larger;
+    background-color:dimgray;
+}
+/* Style for the Navbar */
+.navbar {
+    background-color: darkmagenta; 
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-collapse {
+    display: flex;
+    justify-content: space-around; 
+
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a {
+    margin-right: 40px; 
+    margin-left: 40px; 
+    padding: 10px; 
+}
+    /* Hover effect for links */
+    .navbar-nav .nav-link:hover {
+        color: black !important; /* Text color on hover */
+        background-color: #ffffff; /* Background color on hover */
+        border-radius: 5px;
+    }
+
+body {
+    background-image: url('img/tumblr_inline_n258pbAEBc1qhwjx8.png');
+    background-size: cover; /* This makes the image cover the entire area */
+    background-position: center; /* Center the image */
+}
+
+h2 {
+    color: lightgray;
+}
+
+div.error {
+    color: black;
+    background-color: lightpink;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    left: 200px;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+
